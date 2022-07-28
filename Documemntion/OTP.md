@@ -44,8 +44,8 @@
 
 * **Sample Call:**
 
-  ```curl
-    --location --request POST '{host}/api/common_otp/create' \
+  ```
+    curl --location --request POST '{host}/api/common_otp/create' \
     --header 'Content-Type: application/x-www-form-urlencoded' \
     --data-urlencode 'email=saifuddin+001@govegans.it'
   ```
