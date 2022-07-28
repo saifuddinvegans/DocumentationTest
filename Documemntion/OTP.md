@@ -1,24 +1,25 @@
-**Show User**
+**Create OTP**
 ----
   Returns json data about a single user.
 
 * **URL**
 
-  /users/:id
+  /api/common_otp/create
 
 * **Method:**
 
-  `GET`
+  `POST`
   
-*  **URL Params**
-
-   **Required:**
- 
-   `id=[integer]`
 
 * **Data Params**
 
-  None
+    **Required:**
+    `email:[string]`
+
+    **Oprional:**
+    `phone:[string]`
+
+  If phone is given the the OTP will send to phone number. If not then then OTP will send to email
 
 * **Success Response:**
 
