@@ -51,8 +51,10 @@
     --data-urlencode 'email=example@example.com' \
     --data-urlencode 'phone=+880xxxxxxxxxxx'
   ```
+----
 
-  **Resend OTP**
+
+**Resend OTP**
 ----
  Returns json data about success message to OTP sent or error.
 
