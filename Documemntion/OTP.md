@@ -49,7 +49,7 @@
     curl --location --request POST '{host}/api/common_otp/create' \
     --header 'Content-Type: application/x-www-form-urlencoded' \
     --data-urlencode 'email=example@example.com' \
-    --data-urlencode 'phone=+880xxxxxxxxxxx'
+    --data-urlencode 'phone=+1xxxxxxxxxxx'
   ```
 ----
 
@@ -103,7 +103,7 @@
     curl --location --request POST '{host}/api/common_otp/resend' \
     --header 'Content-Type: application/x-www-form-urlencoded' \
     --data-urlencode 'email=example@example.com' \
-    --data-urlencode 'phone=+880xxxxxxxxxxx'
+    --data-urlencode 'phone=+1xxxxxxxxxxx'
   ```
 ----
   
@@ -155,5 +155,5 @@
     --header 'Content-Type: application/x-www-form-urlencoded' \
     --data-urlencode 'otp=000000' \
     --data-urlencode 'email=example@example.com' \
-    --data-urlencode 'phone=+880xxxxxxxxxxx'
+    --data-urlencode 'phone=+1xxxxxxxxxxx'
   ```
