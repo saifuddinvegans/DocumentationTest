@@ -24,12 +24,21 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** `{ id : 12, name : "Michael Bloom" }`
+    **Content:** ` {
+          error: {
+            message: `OTP sent failed!`
+          }
+        }`
  
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-    **Content:** `{ error : "User doesn't exist" }`
+  * **Code:** 200  <br />
+    **Content:** `{
+                    error: {
+                        "message": "OTP sent failed!",
+                        "error": { object of original server error}
+                    }
+                }`
 
   OR
 
