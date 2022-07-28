@@ -157,4 +157,3 @@
     --data-urlencode 'email=example@example.com' \
     --data-urlencode 'phone=+880xxxxxxxxxxx'
   ```
-----
