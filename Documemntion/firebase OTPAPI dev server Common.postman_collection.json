@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "10129fc7-2a82-4541-87b6-a2054eade8f0",
+		"name": "firebase OTPAPI dev server Common",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [		
+		{
+			"name": "create otp",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "test@claire.health",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+19176973143",
+							"type": "text"
+						}						
+					]
+				},
+				"url": {
+					"raw": "{{cl_dev_server_base_url}}/common_otp/create",
+					"host": [
+						"{{cl_dev_server_base_url}}"
+					],
+					"path": [
+						"common_otp",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resend otp email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "test@claire.health",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+19176973143",
+							"type": "text"
+						}						
+					]
+				},
+				"url": {
+					"raw": "{{cl_dev_server_base_url}}/common_otp/resend",
+					"host": [
+						"{{cl_dev_server_base_url}}"
+					],
+					"path": [
+						"common_otp",
+						"resend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify OTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "otp",
+							"value": "999999",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@claire.health",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+19176973143",
+							"type": "text"
+						}						
+					]
+				},
+				"url": {
+					"raw": "{{cl_dev_server_base_url}}/common_otp/verify",
+					"host": [
+						"{{cl_dev_server_base_url}}"
+					],
+					"path": [
+						"common_otp",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "cl_dev_server_base_url",
+			"value": "{host}/api"
+		}
+		
+	]
+}
