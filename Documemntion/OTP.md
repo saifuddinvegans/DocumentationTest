@@ -40,20 +40,12 @@
                     }
                 }`
 
-  OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{ error : "You are unauthorized to make this request." }`
 
 * **Sample Call:**
 
-  ```javascript
-    $.ajax({
-      url: "/users/1",
-      dataType: "json",
-      type : "GET",
-      success : function(r) {
-        console.log(r);
-      }
-    });
+  ```curl
+    --location --request POST '{host}/api/common_otp/create' \
+    --header 'Content-Type: application/x-www-form-urlencoded' \
+    --data-urlencode 'email=saifuddin+001@govegans.it'
   ```
