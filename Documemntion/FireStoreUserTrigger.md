@@ -9,11 +9,17 @@
   * **Header**
 
       `x-channel` vallue should be `MOBILE` or `WEB`. [this data can be change from setting of firestore]
+
       `x-channel` vallue should be `BACKOFFICE` or `DR_PORTAL` or `CUSTOMER_PORTAL`. [this data can be change from setting of firestore]
+
       `x-app_language` vallue should be `IT`. [this data can be change from setting of firestore]
+
       `x-app_version` vallue should be `1.0.0`. [this data can be change from setting of firestore]
+
       `x-nonce` vallue should be uuid. 
+
       `x-hmac` vallue should be `TBD`. 
+      
 
   * **Data**
       `'{"id":"[uid from firestore user collection]"}'`
@@ -32,5 +38,5 @@
   ```
 
   * **If api call fail**
-  
+
     If the api call fail then the uid will be stored in `aws_failed_user/{aws_failed_userID}`. `aws_failed_userId` is same as `userId`.
