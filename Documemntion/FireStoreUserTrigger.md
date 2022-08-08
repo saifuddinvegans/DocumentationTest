@@ -32,4 +32,5 @@
   ```
 
   * **If api call fail**
+  
     If the api call fail then the uid will be stored in `aws_failed_user/{aws_failed_userID}`. `aws_failed_userId` is same as `userId`.
