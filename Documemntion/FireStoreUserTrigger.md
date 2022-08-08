@@ -20,7 +20,7 @@
 
   * **sample curl call**
   ```
-  curl --location --request POST 'https://api.dev.claire.health/account/new' \
+  curl --location --request POST '{host}/account/new' \
   --header 'x-channel: WEB' \
   --header 'x-caller_id: BACKOFFICE' \
   --header 'x-app_language: IT' \
