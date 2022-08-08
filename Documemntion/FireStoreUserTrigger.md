@@ -30,3 +30,6 @@
   --header 'Content-Type: application/json' \
   --data-raw '{"id":"2efa5dee-33b4-461d-af2f-123e0cc34ea6"}'
   ```
+
+  * **If api call fail**
+    If the api call fail then the uid will be stored in `aws_failed_user/{aws_failed_userID}`. `aws_failed_userId` is same as `userId`.
