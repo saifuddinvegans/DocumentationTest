@@ -3,10 +3,21 @@
   Function triggred whan a new data added to path user/{userId}
 
 * **call aws api function**
+
+    This function get the api setting for header from the firestore `project_configurations/keys/aws_api`. 
+
   * **Header**
 
-      `x-channel` vallue should be `MOBILE` or `WEB`
-      
+      `x-channel` vallue should be `MOBILE` or `WEB`. [this data can be change from setting of firestore]
+      `x-channel` vallue should be `BACKOFFICE` or `DR_PORTAL` or `CUSTOMER_PORTAL`. [this data can be change from setting of firestore]
+      `x-app_language` vallue should be `IT`. [this data can be change from setting of firestore]
+      `x-app_version` vallue should be `1.0.0`. [this data can be change from setting of firestore]
+      `x-nonce` vallue should be uuid. 
+      `x-hmac` vallue should be `TBD`. 
+
+  * **Data**
+      `'{"id":"[uid from firestore user collection]"}'`
+
   * **sample curl call**
   ```
   curl --location --request POST 'https://api.dev.claire.health/account/new' \
