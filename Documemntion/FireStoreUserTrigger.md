@@ -1,6 +1,6 @@
 **OnCreate**
 ----
-  Function triggred whan a new data added to path user/{userId}
+  Function triggred whan a new data added to path user/{userId} or when any anonymous authentication user create. 
 
 * **call aws api function**
 
