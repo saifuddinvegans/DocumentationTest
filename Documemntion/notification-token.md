@@ -33,10 +33,10 @@
     **Sample input**
     ```
     {
-    "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M72",
-    "token": "eSxDSyIMJNwxEM9qk9vxca:APA91bHv-d7BtOr_C1788fr0CMmiBDMgQeVWl1dO79j2ItV8UxNlnVuLJEEZMkHDH417LBlwqhPzjAiloWGaWlu88KFZUJYbZ8VR2nIiL4EZpF5tod5iWdGnkwvKFMZStmwK_q5pi1Rg1",
-    "device": "web",
-    "device_info": {"browser":"Chrome","version":"104.0.0.0"}
+      "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M72",
+      "token": "eSxDSyIMJNwxEM9qk9vxca:APA91bHv-d7BtOr_C1788fr0CMmiBDMgQeVWl1dO79j2ItV8UxNlnVuLJEEZMkHDH417LBlwqhPzjAiloWGaWlu88KFZUJYbZ8VR2nIiL4EZpF5tod5iWdGnkwvKFMZStmwK_q5pi1Rg1",
+      "device": "web",
+      "device_info": {"browser":"Chrome","version":"104.0.0.0"}
     }
     ```
 
@@ -64,17 +64,17 @@
 
   * **Code:** 400  <br />
       **Content:** 
-      
-      `{
-      "user_id": "Required and string",
-      "token": "Required and string",
-      "device": "Required , string and value should be web or ios or android",
-      "device_info": "Optional object data for web {browser:'Browser name',version:'Browser version'}"
-    }`
+        
+        `{
+          "user_id": "Required and string",
+          "token": "Required and string",
+          "device": "Required , string and value should be web or ios or android",
+          "device_info": "Optional object data for web {browser:'Browser name',version:'Browser version'}"
+        }`
 
-    OR 
+      OR 
 
-    `Unauthorized`
+      `Unauthorized`
 
 
 
@@ -82,14 +82,14 @@
 
   ```
     curl --location --request POST '{host}/api/notification-message/token' \
---header 'Authorization: Bearer {login token}' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M72",
-    "token": "eSxDSyIMJNwxEM9qk9vxca:APA91bHv-d7BtOr_C1788fr0CMmiBDMgQeVWl1dO79j2ItV8UxNlnVuLJEEZMkHDH417LBlwqhPzjAiloWGaWlu88KFZUJYbZ8VR2nIiL4EZpF5tod5iWdGnkwvKFMZStmwK_q5pi1Rg1",
-    "device": "web",
-    "device_info": {"browser":"Chrome","version":"104.0.0.0"}
-}'
+    --header 'Authorization: Bearer {login token}' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M72",
+        "token": "eSxDSyIMJNwxEM9qk9vxca:APA91bHv-d7BtOr_C1788fr0CMmiBDMgQeVWl1dO79j2ItV8UxNlnVuLJEEZMkHDH417LBlwqhPzjAiloWGaWlu88KFZUJYbZ8VR2nIiL4EZpF5tod5iWdGnkwvKFMZStmwK_q5pi1Rg1",
+        "device": "web",
+        "device_info": {"browser":"Chrome","version":"104.0.0.0"}
+    }'
   ```
 
 ----
@@ -121,12 +121,12 @@
     `token:[string]`
 
     **Sample input**
-    ```
-    {
-    "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M72",
-    "token": "eSxDSyIMJNwxEM9qk9vxca:APA91bHv-d7BtOr_C1788fr0CMmiBDMgQeVWl1dO79j2ItV8UxNlnVuLJEEZMkHDH417LBlwqhPzjAiloWGaWlu88KFZUJYbZ8VR2nIiL4EZpF5tod5iWdGnkwvKFMZStmwK_q5pi1Rg1"
-    }
-    ```
+      ```
+      {
+      "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M72",
+      "token": "eSxDSyIMJNwxEM9qk9vxca:APA91bHv-d7BtOr_C1788fr0CMmiBDMgQeVWl1dO79j2ItV8UxNlnVuLJEEZMkHDH417LBlwqhPzjAiloWGaWlu88KFZUJYbZ8VR2nIiL4EZpF5tod5iWdGnkwvKFMZStmwK_q5pi1Rg1"
+      }
+      ```
 
   
 
@@ -154,9 +154,9 @@
       **Content:** 
       
       `{
-      "user_id": "Required and string",
-      "token": "Required and string"
-    }`
+        "user_id": "Required and string",
+        "token": "Required and string"
+      }`
 
     OR 
 
@@ -166,10 +166,10 @@
 
   ```
    curl --location --request DELETE '{host}/api/notification-message/token' \
---header 'Authorization: Bearer {login token}' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M71",
-    "token": "eSxDSyIMJNwxEM9qk9vxca:APA91bHv-d7BtOr_C1788fr0CMmiBDMgQeVWl1dO79j2ItV8UxNlnVuLJEEZMkHDH417LBlwqhPzjAiloWGaWlu88KFZUJYbZ8VR2nIiL4EZpF5tod5iWdGnkwvKFMZStmwK_q5pi1Rg2"
-}'
+    --header 'Authorization: Bearer {login token}' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M71",
+        "token": "eSxDSyIMJNwxEM9qk9vxca:APA91bHv-d7BtOr_C1788fr0CMmiBDMgQeVWl1dO79j2ItV8UxNlnVuLJEEZMkHDH417LBlwqhPzjAiloWGaWlu88KFZUJYbZ8VR2nIiL4EZpF5tod5iWdGnkwvKFMZStmwK_q5pi1Rg2"
+    }'
   ```
