@@ -1,6 +1,6 @@
 **Add new notification token**
 ----
-  Returns json data about success message to OTP sent or error.
+  Returns json data about success message as status true or false.
 
 * **URL**
 
@@ -13,12 +13,21 @@
 
 * **Raw json Data Params**
 
+    **Header:**
+
+    `Authorization:Bearer [logintoken]`
+
     **Required:**
+
     `user_id:[string]`
+
     `token:[string]`
+
     `device:[string][web or ios or android]`
 
+
     **Oprional:**
+    
     `device_info:[string]`
 
     **Sample input**
@@ -35,23 +44,33 @@
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-    **Content:** `{ success: 'OTP sent' }`
+  * **Code:** 201 <br />
+    **Content:** 
+    
+    `{ status: true }` 
+    
+    status value is Boolean
  
 * **Error Response:**
 
   * **Code:** 200  <br />
-    **Content:** `{
-                    error: {
-                        "message": "OTP sent failed!",
-                        "error": { object of original server error}
-                    }
-                }`
+    **Content:** 
+    
+    `{ status: false , message:''}` 
+    
+    status value is Boolean message is optional 
 
     OR 
 
-  * **Code:** 200  <br />
-    **Content:** `{"error":{"message":"Error","error":{"message":"nitCommon: error initializing","error":{}}}}`
+  * **Code:** 400  <br />
+    **Content:** 
+    
+    `{
+    "user_id": "Required and string",
+    "token": "Required and string",
+    "device": "Required , string and value should be web or ios or android",
+    "device_info": "Optional object data for web {browser:'Browser name',version:'Browser version'}"
+}`
 
 
 
