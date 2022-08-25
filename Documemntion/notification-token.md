@@ -30,7 +30,8 @@
     
     `device_info:[object]`
 
-    **Sample input**
+    **Sample input:**
+    
     ```
     {
       "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M72",
@@ -120,7 +121,8 @@
 
     `token:[string]`
 
-    **Sample input**
+    **Sample input:**
+
       ```
       {
       "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M72",
