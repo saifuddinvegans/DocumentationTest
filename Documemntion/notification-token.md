@@ -31,7 +31,7 @@
     `device_info:[object]`
 
     **Sample input:**
-    
+
     ```
     {
       "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M72",
@@ -155,10 +155,10 @@
   * **Code:** 400  <br />
       **Content:** 
       
-      {
+      `{
         "user_id": "Required and string",
         "token": "Required and string"
-      }
+      }`
 
     OR 
 
