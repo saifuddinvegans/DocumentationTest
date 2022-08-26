@@ -28,6 +28,8 @@
 
     **Oprional:**
     
+    `overwrite:[Boolean]`
+
     `device_info:[object]`
 
     **Sample input:**
@@ -70,6 +72,7 @@
           "user_id": "Required and string",
           "token": "Required and string",
           "device": "Required , string and value should be web or ios or android",
+          "overwrite": "Optional Boolean value",
           "device_info": "Optional object data for web {browser:'Browser name',version:'Browser version'}"
         }
 
