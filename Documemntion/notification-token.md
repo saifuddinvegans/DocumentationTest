@@ -39,6 +39,7 @@
       "user_id": "nTZ4xpIpGnNZtqnrfofOieRp7M72",
       "token": "eSxDSyIMJNwxEM9qk9vxca:APA91bHv-d7BtOr_C1788fr0CMmiBDMgQeVWl1dO79j2ItV8UxNlnVuLJEEZMkHDH417LBlwqhPzjAiloWGaWlu88KFZUJYbZ8VR2nIiL4EZpF5tod5iWdGnkwvKFMZStmwK_q5pi1Rg1",
       "device": "web",
+      "overwrite": true,
       "device_info": {"browser":"Chrome","version":"104.0.0.0"}
     }
     ```
