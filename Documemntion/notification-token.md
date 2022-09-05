@@ -179,3 +179,8 @@
         "token": "eSxDSyIMJNwxEM9qk9vxca:APA91bHv-d7BtOr_C1788fr0CMmiBDMgQeVWl1dO79j2ItV8UxNlnVuLJEEZMkHDH417LBlwqhPzjAiloWGaWlu88KFZUJYbZ8VR2nIiL4EZpF5tod5iWdGnkwvKFMZStmwK_q5pi1Rg2"
     }'
   ```
+
+----
+**Note**
+----
+  Android device was not able to get both notification and Data in the same time so we have to put title and message in the data.
