@@ -342,24 +342,24 @@
 * **Success Response:**
 
   * **Code:** 201 <br />
-    **Content:**
-    
-      ` {
-        "status": true,
-        "results": [
-            {
-                "error": {
-                    "code": "messaging/registration-token-not-registered",
-                    "message": "The provided registration token is not registered. A previously valid registration token can be unregistered for a variety of reasons. See the error documentation for more details. Remove this registration token and stop using it to send messages."
-                }
-            },
-            {
-                "messageId": "28c19300-4b5d-411b-988f-f93916b45f64"
-            }
-        ],
-        "failureCount": 1,
-        "successCount": 1
-      }` 
+      **Content:**
+      
+        ` {
+          "status": true,
+          "results": [
+              {
+                  "error": {
+                      "code": "messaging/registration-token-not-registered",
+                      "message": "The provided registration token is not registered. A previously valid registration token can be unregistered for a variety of reasons. See the error documentation for more details. Remove this registration token and stop using it to send messages."
+                  }
+              },
+              {
+                  "messageId": "28c19300-4b5d-411b-988f-f93916b45f64"
+              }
+          ],
+          "failureCount": 1,
+          "successCount": 1
+        }` 
 
 
       status value is Boolean
