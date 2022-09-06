@@ -229,7 +229,8 @@
   * **Code:** 201 <br />
     **Content:** 
     
-    `{
+    `
+    {
         "status": true,
         "results": [
             {
@@ -244,7 +245,8 @@
         ],
         "failureCount": 1,
         "successCount": 1
-    }` 
+    }
+    ` 
 
 
     status value is Boolean
