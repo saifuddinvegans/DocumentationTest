@@ -409,6 +409,6 @@
 ----
 **Note**
 ----
-  * Android device are not able to get both notification and Data in the same time so we put title and message in the data.
+  * Android device are not able to get both notification and Data in the same time so we put title and message in the data(for android only).
   * To save time for sending notification with FCM for same request all user token are grouped to sended in single call.
   * In firestore the data are storing with doc name userId and as a map as format of {web:array, ios:array, android:array} 
