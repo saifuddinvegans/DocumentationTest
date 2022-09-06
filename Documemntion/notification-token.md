@@ -342,9 +342,9 @@
 * **Success Response:**
 
   * **Code:** 201 <br />
-    **Content:** 
+    **Content:**
     
-      `{
+      ` {
         "status": true,
         "results": [
             {
@@ -362,7 +362,7 @@
       }` 
 
 
-    status value is Boolean
+      status value is Boolean
  
 * **Error Response:**
 
