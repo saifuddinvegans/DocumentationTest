@@ -297,7 +297,122 @@
 
 ----
 
+**Send Notification to User**
+----
+  Returns json data about success message as status true or false.
+
+* **URL**
+
+  /api/notification-message/send/{userId}
+
+* **Method:**
+
+  `POST`
+  
+
+* **Raw json Data Params**
+
+
+    **Required:**
+
+    `title:[string]`
+
+    `message:[string]`    
+
+
+    **Oprional:**
+    
+    `data:[object]`
+
+    **Sample input:**
+
+    ```
+    {
+      "title": "Claire dev",
+      "message": "Test message from dev",
+      "data":{
+          "type":"scheduling",
+          "metadata":"ewoib3JkZXJfaWQiOiAiMTc1OTU4OTMwMjkiCn0="
+        }
+    }
+    ```
+
+  
+
+* **Success Response:**
+
+  * **Code:** 201 <br />
+    **Content:** 
+    
+    `
+    {
+        "status": true,
+        "results": [
+            {
+                "error": {
+                    "code": "messaging/registration-token-not-registered",
+                    "message": "The provided registration token is not registered. A previously valid registration token can be unregistered for a variety of reasons. See the error documentation for more details. Remove this registration token and stop using it to send messages."
+                }
+            },
+            {
+                "messageId": "28c19300-4b5d-411b-988f-f93916b45f64"
+            }
+        ],
+        "failureCount": 1,
+        "successCount": 1
+    }
+    ` 
+
+
+    status value is Boolean
+ 
+* **Error Response:**
+
+  * **Code:** 200  <br />
+      **Content:** 
+      
+        ` {
+            "status": false,
+            "results": [],
+            "failureCount": 0,
+            "successCount": 0
+        }` 
+      
+      status value is Boolean 
+
+    OR 
+
+  * **Code:** 400  <br />
+      **Content:** 
+        
+        `{
+            "title": "Required and string",
+            "message": "Required and string",
+            "data": "Optional object data"
+        }`
+
+     
+
+
+
+* **Sample Call:**
+
+  ```
+    curl --location --request POST '{host}/api/notification-message/send/G2vp9iWKpxNhXiNhnw8EQ4k4ti03' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+      "title": "Claire dev",
+      "message": "Test message from dev",
+      "data":{
+          "type":"scheduling",
+          "metadata":"ewoib3JkZXJfaWQiOiAiMTc1OTU4OTMwMjkiCn0="
+      }
+  }'
+  ```
+
 ----
 **Note**
 ----
-  Android device was not able to get both notification and Data in the same time so we have to put title and message in the data.
+  * Android device are not able to get both notification and Data in the same time so we put title and message in the data.
+  * To save time for sending notification with FCM for same request all user token are grouped to sended in single call.
+  * In firestore the data are storing with doc name userId and as a map as format of {web:array, ios:array, android:array} 
